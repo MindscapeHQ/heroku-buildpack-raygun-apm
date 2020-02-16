@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Run the rgc command with the selected subcommand
+bash -c "$APM_BIN_DIR/rgc "$@" "
