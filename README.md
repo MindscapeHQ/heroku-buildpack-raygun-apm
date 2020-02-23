@@ -7,9 +7,9 @@ This buildpack installs the [Raygun APM](https://raygun.com/platform/apm) agent 
 _If you've never deployed your Rails project on Heroku before, please consult [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails5) first to get started._
 
 ```
-cd <YOUR HEROKU PROJECT>
+cd <YOUR RUBY/RAILS PROJECT>
 
-# for a new Heroku project
+# Initialize a new Heroku project
 heroku create
 
 # add the Ruby buildpack
