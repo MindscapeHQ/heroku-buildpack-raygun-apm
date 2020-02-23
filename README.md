@@ -1,6 +1,6 @@
 # Heroku buildpack for Raygun APM
 
-This buildpack installs the [Raygun APM](https://raygun.com/platform/apm) agent on your dyno, and starts it after every deploy. To collect data from a Ruby application, you also need the relevant Ruby gem (raygun-apm-rails for a Rails app, raygun-apm otherwise) to your Gemfile.
+This buildpack installs the [Raygun APM](https://raygun.com/platform/apm) agent on your dyno, and starts it after every deploy. To collect data from a Ruby application, you also need the relevant Ruby gem ([raygun-apm-rails](https://rubygems.org/gems/raygun-apm-rails/versions/0.1.7) for a Rails app, [raygun-apm](https://rubygems.org/gems/raygun-apm) otherwise) to your Gemfile.
 
 ## Installation
 
