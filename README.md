@@ -18,11 +18,11 @@ cd <YOUR RUBY/RAILS PROJECT>
 # Initialize a new Heroku project
 heroku create
 
-# add this buildpack
-heroku buildpacks:set https://github.com/MindscapeHQ/heroku-buildpack-raygun-apm
-
 # add the Ruby buildpack
 heroku buildpacks:add heroku/ruby
+
+# add this buildpack
+heroku buildpacks:add https://github.com/MindscapeHQ/heroku-buildpack-raygun-apm
 
 # add your APM API key to your application configuration
 heroku config:add RAYGUN_API_KEY=<YOUR RAYGUN API KEY>
