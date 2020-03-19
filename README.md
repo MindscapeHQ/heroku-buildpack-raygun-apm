@@ -68,7 +68,7 @@ heroku create
 # add this buildpack
 heroku buildpacks:set https://github.com/MindscapeHQ/heroku-buildpack-raygun-apm
 
-# add the Ruby buildpack
+# add the Node.js buildpack
 heroku buildpacks:add heroku/nodejs
 
 # add your APM API key to your application configuration
