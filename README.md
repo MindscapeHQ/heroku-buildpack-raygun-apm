@@ -15,6 +15,8 @@ For Ruby applications, you need to add the relevant Ruby gem ([raygun-apm-rails]
 ```
 cd <YOUR RUBY/RAILS PROJECT>
 
+bundle add raygun-apm-rails -g production # unless you already have the gem in your Gemfile
+
 # Initialize a new Heroku project
 heroku create
 
