@@ -30,6 +30,7 @@ heroku buildpacks:add https://github.com/MindscapeHQ/heroku-buildpack-raygun-apm
 heroku config:add RAYGUN_API_KEY=<YOUR RAYGUN API KEY>
 
 # Deploy to Heroku
+git commit -a -m "Heroku setup for Raygun APM"
 git push heroku master
 ```
 
