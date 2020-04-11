@@ -34,7 +34,7 @@ puts_step "Updating apt caches for dependencies"
 apt-get $APT_OPTIONS update
 
 puts_step "Installing dependencies"
-DEPS="unzip"
+DEPS="unzip net-tools"
 apt-get $APT_OPTIONS -y --allow-downgrades --allow-remove-essential --allow-change-held-packages -d install --reinstall --no-install-recommends $DEPS
 IFS=" " read -a DEP_PKGS <<< "$DEPS"
 for DEP in ${DEP_PKGS[@]}; do
