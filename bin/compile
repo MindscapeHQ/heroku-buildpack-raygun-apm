@@ -64,3 +64,12 @@ puts_step "Installing rgc wrapper"
 mkdir -p "$APM_DIR/bin/agent"
 cp "$BUILDPACK_DIR/extra/rgc" "$APM_DIR/bin/agent/"
 chmod +x "$APM_DIR/bin/agent/rgc"
+
+# Export application environment variables too
+puts_step "Export application environment variables"
+if [ -d "$ENV_DIR" ]; then
+  for e in $(ls $ENV_DIR); do
+    export "$e=$(cat $ENV_DIR/$e)"
+    :
+  done
+fi
