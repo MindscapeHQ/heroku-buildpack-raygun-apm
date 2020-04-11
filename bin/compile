@@ -73,8 +73,3 @@ if [ -d "$ENV_DIR" ]; then
     :
   done
 fi
-
-# Attempt to tune OS network receive buffers for UDP sink bursts
-puts_step "Attempt to tune OS network receive buffers"
-echo "net.core.rmem_max=5242880" >> /etc/sysctl.conf
-echo "net.core.rmem_default=5242880" >> /etc/sysctl.conf
