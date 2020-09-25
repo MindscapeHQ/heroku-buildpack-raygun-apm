@@ -69,7 +69,7 @@ cd <YOUR NODE.JS PROJECT>
 heroku create
 
 # add this buildpack
-heroku buildpacks:set https://github.com/MindscapeHQ/heroku-buildpack-raygun-apm
+heroku buildpacks:add https://github.com/MindscapeHQ/heroku-buildpack-raygun-apm
 
 # add the Node.js buildpack
 heroku buildpacks:add heroku/nodejs
