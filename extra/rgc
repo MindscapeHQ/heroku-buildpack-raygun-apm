@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+SETTINGS_DIRECTORY_PATH="$HOME/share/Raygun/AgentSettings"
 
 # Run the rgc command with the selected subcommand
-bash -c "$APM_BIN_DIR/rgc "$@" "
+bash -c "Raygun_SettingsDirectoryPath=\"$SETTINGS_DIRECTORY_PATH\" $APM_BIN_DIR/rgc "$@" "
