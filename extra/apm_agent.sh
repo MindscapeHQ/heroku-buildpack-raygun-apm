@@ -10,6 +10,8 @@ LOG_DIRECTORY_PATH="$SHARE_DIR/AgentLogs"
 BLACKLIST_DIRECTORY_PATH="$SHARE_DIR/Blacklist"
 SETTINGS_DIRECTORY_PATH="$SHARE_DIR/AgentSettings"
 
+# Ignore this section for heroku ps:exec
+if [ -z "$SSH_CONNECTION" ]; then
 if [ -z "$RAYGUN_API_KEY" ]; then
   echo "RAYGUN_API_KEY environment variable not set. Run: heroku config:add RAYGUN_API_KEY=<your API key>"
   DISABLE_APM_AGENT=1
@@ -21,4 +23,5 @@ if [ -n "$DISABLE_APM_AGENT" ]; then
 else
   echo "Starting APM Agent"
   bash -c "Raygun_DefaultApiKey=\"$RAYGUN_API_KEY\" Raygun_ProfilerCommandStreamFilePath=\"$PROFILER_COMMAND_STREAM_FILE_PATH\" Raygun_LogDirectoryPath=\"$LOG_DIRECTORY_PATH\" Raygun_BlacklistDirectoryPath=\"$BLACKLIST_DIRECTORY_PATH\" Raygun_SettingsDirectoryPath=\"$SETTINGS_DIRECTORY_PATH\" $APM_BIN_DIR/RaygunAgent 2>&1 &"
+fi
 fi
