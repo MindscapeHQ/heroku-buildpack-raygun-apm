@@ -22,6 +22,6 @@ if [ -n "$DISABLE_APM_AGENT" ]; then
   echo "The APM Agent has been disabled. Unset the DISABLE_APM_AGENT or set missing environment variables."
 else
   echo "Starting APM Agent"
-  bash -c "Raygun_DefaultApiKey=\"$RAYGUN_API_KEY\" Raygun_ProfilerCommandStreamFilePath=\"$PROFILER_COMMAND_STREAM_FILE_PATH\" Raygun_LogDirectoryPath=\"$LOG_DIRECTORY_PATH\" Raygun_BlacklistDirectoryPath=\"$BLACKLIST_DIRECTORY_PATH\" Raygun_SettingsDirectoryPath=\"$SETTINGS_DIRECTORY_PATH\" $APM_BIN_DIR/RaygunAgent 2>&1 &"
+  bash -c "Raygun_DefaultApiKey=\"$RAYGUN_API_KEY\" Raygun_NetworkTransmissionMode=\"Tcp,Udp\" Raygun_ProfilerCommandStreamFilePath=\"$PROFILER_COMMAND_STREAM_FILE_PATH\" Raygun_LogDirectoryPath=\"$LOG_DIRECTORY_PATH\" Raygun_BlacklistDirectoryPath=\"$BLACKLIST_DIRECTORY_PATH\" Raygun_SettingsDirectoryPath=\"$SETTINGS_DIRECTORY_PATH\" $APM_BIN_DIR/RaygunAgent 2>&1 &"
 fi
 fi
